@@ -14,7 +14,7 @@ def retry(
 
     decorated_func = None
 
-    # If decorator was used without parentheses, then function is the first arg
+    # If decorator was used without brackets, then function is the first arg
     if callable(max_tries):
         decorated_func, max_tries = max_tries, 3
 

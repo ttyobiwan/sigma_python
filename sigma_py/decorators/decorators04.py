@@ -4,7 +4,7 @@ DecoratedFunc: TypeAlias = Callable[..., Any]
 
 
 def retry(max_tries: int = 3) -> DecoratedFunc:
-    def decorator(fn: Callable[..., Any]) -> DecoratedFunc:
+    def decorator(fn: DecoratedFunc) -> DecoratedFunc:
         def wrapper(*args, **kwargs) -> Any:
             for i in range(max_tries):
                 try:
